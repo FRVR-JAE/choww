@@ -16,13 +16,13 @@ const MobileNav = () => {
         <Menu className="text-red-700" />
       </SheetTrigger>
 
-      <SheetContent>
+      <SheetContent className="space-y-3">
         <SheetTitle>
           <span>Welcome to chow</span>
         </SheetTitle>
         <Separator />
         <SheetDescription className="flex">
-          <Button></Button>
+          <Button className="flex-1 font-bold bg-red-700 ">Log In</Button>
         </SheetDescription>
       </SheetContent>
     </Sheet>
