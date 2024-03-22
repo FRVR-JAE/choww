@@ -3,11 +3,13 @@ import { useMutation } from "react-query";
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 type CreateUserRequest = {
-  auth0ID: string;
+  auth0id: string;
   email: string;
 };
 
 export const useCreateMyUser = () => {
+    const {getAccessTokenSilently} = useAuth0();
+    
   const createMyUserRequest = async (user: CreateUserRequest) => {
     const response = await fetch(`${API_BASE_URL}/api/my/user`, {
       method: "POST",
